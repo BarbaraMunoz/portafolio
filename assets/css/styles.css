@@ -1,0 +1,480 @@
+
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 120rem;
+    margin: auto;
+    width: 92%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Aumenta el tamaño del logo y agrega un borde redondo */
+#logo {
+    width: 60px;
+    height: 60px; /* Establece la altura igual al ancho para que sea un círculo */
+    border: 1px solid #000;
+    border-radius: 50%; /* Hace que el borde sea redondo */
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1EA6B4;
+}
+
+/* Hero Section */
+/* Estilos generales para la sección hero */
+.hero {
+    background: #1EA6B4;
+    color: #fff;
+    padding: 22em 0; /* Aumentado el padding superior e inferior */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 20em;
+}
+
+.social-icons {
+    position: absolute;
+    top: 50%;
+    border: 2px solid #eee;
+    border-left: 2px solid #eee;
+    transform: translateY(-50%);
+}
+
+.social-icon {
+    border: 2px solid #fff;
+    padding: 15px;
+}
+
+.social-icon-link {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90rem;
+    width: 92%;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-description {
+    margin: 3rem auto 0 auto;
+    max-width: 80rem;
+    color: #fff;
+    font-size: 22px;
+    width: 60%;
+    line-height: 1.6;
+}
+
+/* Media queries para hacer la sección responsive */
+
+/* Para pantallas pequeñas (ejemplo: smartphones) */
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 18em 0; /* Aumentar el espacio superior e inferior */
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 10em; /* Reducir el espacio entre iconos y texto */
+    }
+
+    .social-icons {
+        display: none; /* Ocultar los iconos en pantallas pequeñas */
+    }
+
+    .hero-text {
+        top: 60%; /* Bajado el texto en pantallas pequeñas */
+    }
+
+    .hero-title {
+        font-size: 40px; /* Reducir el tamaño del título */
+    }
+
+    .hero-description {
+        font-size: 18px; /* Reducir el tamaño del texto */
+        width: 80%; /* Ajustar el ancho del texto */
+    }
+}
+
+
+/* About*/
+/* About */
+.about {
+    background: #fafafa;
+    padding: 12rem 0;
+}
+
+.main-container {
+    max-width: 120rem;
+    margin: auto;
+    width: 92%;
+}
+
+.about_title {
+    display: block;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+
+}
+
+.about_title::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 1.5rem);
+    height: 5px;
+    width: 3rem;
+    background: #1EA6B4;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    }
+
+.about_subtitle {
+    display: block;
+    text-align: center;
+    color: #777;
+    font-size: 20px;
+    max-width: 60%;
+    margin: 5rem auto;
+    line-height: 1.6;
+}
+
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .about__content {
+        grid-template-columns: 1fr;
+        grid-gap: 8rem;
+    }
+}
+
+.btn--theme {
+    background: #1EA6B4;
+    color: #fff;
+}
+.btn--med {
+    padding: 0.5rem 2rem;
+    font-size: 18px;
+}
+
+.about__content-title,
+.about__intro-title,
+.about__skills-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .about__content-title,
+    .about__intro-title,
+    .about__skills-title {
+        font-size: 24px;
+    }
+}
+
+.about__content-details-para,
+.about__intro-text {
+    font-size: 20px;
+    color: grey;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about__content-details-para--hl {
+    font-weight: 700;
+    margin: 0 3px;
+}
+
+.about__content-details-para:last-child,
+.about__intro-text:last-child {
+    margin-bottom: 4rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills__skill {
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 16px;
+    background: rgba(153, 153, 153, 0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #777; 
+
+}
+
+/*Fin About*/
+
+
+/* Proyectos*/
+.projects {
+  background: #FFFFFF;
+  padding: 8rem 0;
+}
+
+.section-title {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  height: 5px;
+  width: 3rem;
+  background: #1EA6B4;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  }
+
+.project {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 5rem;
+  margin-bottom: 11rem;
+}
+
+.project-btn {
+  text-decoration: none;
+  margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para hover */
+}
+
+.project-btn:hover {
+    /* Estilos al hacer hover */
+    background: #fff;
+    color: #1EA6B4;
+    border: 2px solid #1EA6B4;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 8rem;
+  }
+}
+
+.project:last-child {
+  margin-bottom: 5rem;
+}
+
+.project-image {
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project-content {
+    align-items: center;
+  }
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project-title {
+    font-size: 24px;
+  }
+}
+
+.project-description {
+  font-size: 20px;
+  color: grey;
+  max-width: 60rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project-description {
+    font-size: 1.7rem;
+  }
+}
+
+/* Fin Proyectos*/
+
+/*Contacto*/
+.contact-section {
+  background: #fafafa;
+  text-align: center; /* Centrar contenido horizontalmente */
+  padding: 8rem;
+}
+
+.contact-title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.about-btn {
+  background: #1EA6B4;
+  color: #fff;
+  text-decoration: none !important;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.about-btn:hover {
+  /* Estilos al hacer hover */
+  background: #fff;
+  color: #1EA6B4;
+  border: 2px solid #1EA6B4;
+}
+
+/*Fin Contacto*/
+
+/*Footer*/
+.main-footer {
+  background: #000;
+  color: #fff;
+}
+
+.main-footer__upper {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main-footer__upper {
+    padding: 6rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-footer__row {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.main-footer__heading {
+  font-size: 2rem;
+}
+
+.main-footer__social-cont {
+  display: flex; /* Añadido */
+  justify-content: center; /* Añadido */
+  margin-top: 2rem;
+}
+
+.main-footer__short-desc {
+  text-align: left;
+  color: #d0cece;
+  font-size: 14px;
+  line-height: 1.7;
+  width: 50%;
+}
+
+.footer-icon {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px; /* Espacio horizontal entre los iconos */
+}
+
+.footer-icon:hover {
+  color: #1EA6B4;
+}
